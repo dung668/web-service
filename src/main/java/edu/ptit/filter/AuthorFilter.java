@@ -36,13 +36,13 @@ public class AuthorFilter implements Filter {
 		
 		HttpSession session = req.getSession();
 		if(session.getAttribute("login_user") == null) { // nếu chưa đăng nhập
-			res.sendRedirect("/web-service/login");
+			res.sendRedirect("/eshop/login");
 		} else {
 			UserDAO userDao = new UserDAOImpl();
 			String username = session.getAttribute("login_user").toString();
 			User user = userDao.getUserByUserName(username);
 			if(user.getRole() == Constants.USER_ROLE) { // nếu đã đăng nhập và là user
-				res.sendRedirect("/web-service/home");
+				res.sendRedirect("/eshop/home");
 			} else chain.doFilter(request, response); // là admin
 		}
 	}
