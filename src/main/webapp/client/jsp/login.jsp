@@ -24,13 +24,15 @@
 					</div>
 				</c:if>
 				<form action="login" method="POST">
-					<input class="input-sweet" type="text" name="username" placeholder="Nhập vào tên tài khoản">
-					<input class="input-sweet" type="password" name="password" placeholder="Nhập vào mật khẩu">
+					<input class="input-sweet" type="text" name="username" placeholder="Nhập tên tài khoản">
+					<input class="input-sweet" type="password" name="password" placeholder="Nhập mật khẩu">
 					<div class="flex">
-						<a href="./"><button class="btn btn-no">Hủy</button></a>
+						<a href="./register"><button type="button" class="btn btn-no">Đăng ký</button></a>
 						<button type="submit" class="btn btn-yes">Đăng nhập</button>
 					</div>
 				</form>
+				<br/>
+				<p><a href="https://www.facebook.com/dialog/oauth?client_id=357862431521823&redirect_uri=https://localhost:8443/eshop/login&scope=email" style="color: #3a3a3a; text-align: center; text-decoration: underline;">Đăng nhập bằng Facebook</a></p>
 			</div>
 		</div>
 	</div>

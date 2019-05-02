@@ -36,7 +36,7 @@ public class DosFilter implements Filter {
 		if(session.getAttribute("login_user") != null) {
 			
 			long timeElapsed = System.currentTimeMillis() - (long) session.getAttribute("last_request");
-			if(timeElapsed < 1500) // request < 1.5s
+			if(timeElapsed < 500) // request < 0.5s
 				session.setAttribute("spam", true);
 			
 			if(session.getAttribute("spam").equals(true)) {
@@ -51,8 +51,8 @@ public class DosFilter implements Filter {
 					String username = session.getAttribute("login_user").toString();
 					UserDAO userDao = new UserDAOImpl();
 					User spammer = userDao.getUserByUserName(username);
-					spammer.setBanned(true); // user bi banned
-					userDao.updateUser(spammer);
+//					spammer.setBanned(true); // user bi banned
+//					userDao.updateUser(spammer);
 					session.removeAttribute("login_user"); // dang xuat spammer khoi he thong
 					return;
 				}

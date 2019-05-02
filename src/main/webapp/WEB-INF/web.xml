@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-	id="WebApp_ID" version="4.0">
-	<display-name>eshop</display-name>
-	<welcome-file-list>
-		<welcome-file>home</welcome-file>
-	</welcome-file-list>
-
-	<context-param>
-		<param-name>authtoken</param-name>
-		<param-value>YjXpApRG-r2tkOPxWBCi0ZfTxyfjjP5hXzAnPv-RoGlIzoJ2GqZGVvR3vw0</param-value>
-	</context-param>
-	
-	<context-param>
-		<param-name>posturl</param-name>
-		<param-value>https://www.sandbox.paypal.com/cgi-bin/webscr</param-value>
-	</context-param>
-	
-	<context-param>
-		<param-name>business</param-name>
-		<param-value>seller@ptit.edu.vn</param-value>
-	</context-param>
-	
-	<context-param>
-		<param-name>returnurl</param-name>
-		<param-value>http://localhost:8080/eshop/order</param-value>
-	</context-param>
-
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>eshop</display-name>
+  <welcome-file-list>
+    <welcome-file>home</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>authtoken</param-name>
+    <param-value>YjXpApRG-r2tkOPxWBCi0ZfTxyfjjP5hXzAnPv-RoGlIzoJ2GqZGVvR3vw0</param-value>
+  </context-param>
+  <context-param>
+    <param-name>posturl</param-name>
+    <param-value>https://www.sandbox.paypal.com/cgi-bin/webscr</param-value>
+  </context-param>
+  <context-param>
+    <param-name>business</param-name>
+    <param-value>seller@ptit.edu.vn</param-value>
+  </context-param>
+  <context-param>
+    <param-name>returnurl</param-name>
+    <param-value>http://localhost:8080/eshop/order</param-value>
+  </context-param>
 </web-app>

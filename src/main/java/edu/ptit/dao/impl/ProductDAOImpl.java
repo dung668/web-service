@@ -32,8 +32,11 @@ public class ProductDAOImpl implements ProductDAO {
 			return product;
 		} catch (SQLException e) {
 			e.printStackTrace();
+			
 		}
+		
 		return null;
+		
 	}
 
 	@Override
@@ -51,9 +54,10 @@ public class ProductDAOImpl implements ProductDAO {
 			ps.setString(4, product.getDetails());
 			ps.setInt(5, product.getId());
 			ps.executeUpdate();
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	@Override

@@ -30,11 +30,13 @@
 	
 	<!-- Show products -->
 	<div class="main">
-		<div class="container">
+		<div class="container flex flex-center">
 			
-			<p>Xin chào ${login_user}</p>
+			<p>Xin chào ${user.fullName}</p>&nbsp;&nbsp;
 			
-			<a href="logout"><button class="btn btn-yes">Đăng xuất</button></a>
+			<a href="logout"><button class="btn btn-yes">Đăng xuất</button></a>&nbsp;&nbsp;
+			
+			<a href="update-information"><button class="btn btn-yes">Cập nhật thông tin</button></a>
 			
 		</div>
 	</div>

@@ -27,4 +27,10 @@ public interface UserDAO {
 	// lay ten user tu id cua user
 	String getUserFullNameByIdUser(int id);
 	
+	
+	// FACEBOOK
+	boolean isFacebookLinkedToAccount(String facebookId);
+	boolean isFacebookIdExits(String facebookId);
+	User findUserByFacebookId(String facebookId);
+	
 }

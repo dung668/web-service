@@ -88,28 +88,7 @@
 								<option value="cod">COD (thanh toán khi nhận hàng)</option>
 								<option value="atm">Thanh toán qua ATM</option>
 							</select>
-							<!-- paypal -->
-							<form action="${initParam.posturl}" method="post">
-						
-								<input type="hidden" name="upload" value="1">
-								<input type="hidden" name="return" value="${initParam.returnurl}">
-								<input type="hidden" name="cmd" value="_cart">
-								<input type="hidden" name="business" value="${initParam.business}">
-								
-								<c:set var="count" value="1" scope="page"></c:set>
-								<c:forEach items="${order.items}" var="item">
-								
-									<input type="hidden" name="item_name_${count}" value="${item.product.name }">
-									<input type="hidden" name="amount_${count}" value="${item.product.price}">
-									<input type="hidden" name="quantity_${count}" value="${item.quantity}">
-									<c:set var="count" value="${count + 1}" scope="page"></c:set>
-									
-								</c:forEach>
-								
-								<input class="btn btn-yes" type="submit" value="Tiến hành thanh toán">
-								
-							</form>
-<!-- 							<a href="order"><button class="btn btn-yes">Tiến hành thanh toán</button></a> -->
+							<a href="paypal-payment"><button class="btn btn-yes">Tiến hành thanh toán</button></a>
 						</div>
 					</div>
 					<hr>

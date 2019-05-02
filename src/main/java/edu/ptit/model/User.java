@@ -14,15 +14,7 @@ public class User implements Serializable {
 	private String phone;
 	private String createdDate;
 	private int role;
-	private boolean banned;
-	
-	public boolean isBanned() {
-		return banned;
-	}
-
-	public void setBanned(boolean isBanned) {
-		this.banned = isBanned;
-	}
+	private String facebookId;
 
 	public User() {
 		super();
@@ -47,6 +39,14 @@ public class User implements Serializable {
 		this.address = address;
 		this.phone = phone;
 		this.role = role;
+	}
+	
+	public String getFacebookId() {
+		return facebookId;
+	}
+	
+	public void setFacebookId(String facebookId) {
+		this.facebookId = facebookId;
 	}
 
 	public int getId() {
@@ -125,7 +125,7 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", fullName=" + fullName
 				+ ", email=" + email + ", address=" + address + ", phone=" + phone + ", createdDate=" + createdDate
-				+ ", role=" + role + "]";
+				+ ", role=" + role + ", facebookId=" + facebookId + "]";
 	}
-	
+
 }
