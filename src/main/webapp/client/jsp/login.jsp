@@ -32,7 +32,7 @@
 					</div>
 				</form>
 				<br/>
-				<p><a href="https://www.facebook.com/dialog/oauth?client_id=357862431521823&redirect_uri=https://localhost:8443/eshop/login&scope=email" style="color: #3a3a3a; text-align: center; text-decoration: underline;">Đăng nhập bằng Facebook</a></p>
+				<p><a href="https://www.facebook.com/dialog/oauth?client_id=357862431521823&redirect_uri=https://localhost:8443/eshop/fb-login&scope=email" style="color: #3a3a3a; text-align: center; text-decoration: underline;">Đăng nhập bằng Facebook</a></p>
 			</div>
 		</div>
 	</div>

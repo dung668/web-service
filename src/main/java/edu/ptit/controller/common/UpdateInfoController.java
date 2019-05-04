@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import edu.ptit.dao.UserDAO;
 import edu.ptit.dao.impl.UserDAOImpl;
 import edu.ptit.model.User;
-import edu.ptit.util.Constants;
+import edu.ptit.util.Common;
 
 @WebServlet("/update-information")
 public class UpdateInfoController extends HttpServlet {
@@ -45,22 +45,30 @@ public class UpdateInfoController extends HttpServlet {
 		String phoneNumber = request.getParameter("phone-number");
 		
 		if(userDao.isDuplicate(username, null)) {
-//			request.setAttribute("errorMess", Constants.DUPLICATE_USERNAME);
-//			request.getRequestDispatcher("update-information").forward(request, response);
 			response.sendRedirect("update-information?errorMess=duplicate");
 			return;
 		}
 		
 		HttpSession session = request.getSession();
-		User user = userDao.findUserByFacebookId(session.getAttribute("facebookId").toString());
+		User user = null; 
 		
-		user.setUsername(username);
-		user.setPassword(password);
-		user.setAddress(address);
-		user.setPhone(phoneNumber);
+		if(session.getAttribute("facebookId") != null)
+			user = userDao.findUserByFacebookId(session.getAttribute("facebookId").toString());
+		else user = userDao.getUserByUserName(session.getAttribute("login_user").toString());
+		
+		if(username != null) user.setUsername(username);
+		
+		if(user.getPassword() == null || Common.MD5(password) != user.getPassword())
+			user.setPassword(password);
+		
+		if(address != null) user.setAddress(address);
+		
+		if(phoneNumber != null) user.setPhone(phoneNumber);
 		
 		userDao.updateUser(user);
+		
 		session.removeAttribute("facebookId");
+		
 		session.setAttribute("login_user", username);
 		
 		// dosfilter

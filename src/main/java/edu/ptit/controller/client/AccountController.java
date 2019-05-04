@@ -29,10 +29,19 @@ public class AccountController extends HttpServlet {
 		
 		// neu nguoi dung da dang nhap, lay thong tin nguoi dung
 		HttpSession session = request.getSession();
-		// lay username dang duoc dang nhap
-		String username = session.getAttribute("login_user").toString();
+
 		UserDAO userDao = new UserDAOImpl();
-		User user = userDao.getUserByUserName(username); // doi tuong user dang dang nhap
+		
+		// lay username dang duoc dang nhap
+		User user = null;
+		Object facebookId = session.getAttribute("facebookId");
+		
+		if(facebookId != null) {
+			user = userDao.findUserByFacebookId(facebookId.toString());
+		} else {
+			String username = session.getAttribute("login_user").toString();
+			user = userDao.getUserByUserName(username); // doi tuong user dang dang nhap
+		}
 		
 		CategoryDAO categoryDao = new CategoryDAOImpl();
 		request.setAttribute("categories", categoryDao.getAllCategories());

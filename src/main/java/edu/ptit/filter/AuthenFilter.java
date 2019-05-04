@@ -30,7 +30,7 @@ public class AuthenFilter implements Filter {
 		HttpServletResponse res = (HttpServletResponse) response;
 		
 		HttpSession session = req.getSession();
-		if(session.getAttribute("login_user") == null) 	// neu nguoi dung chua dang nhap
+		if(session.getAttribute("login_user") == null && session.getAttribute("facebookId") == null) 	// neu nguoi dung chua dang nhap
 			res.sendRedirect("login");  				// thi chuyen sang trang dang nhap
 		else chain.doFilter(request, response);			// neu nguoi dung da dang nhap
 		

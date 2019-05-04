@@ -110,10 +110,6 @@ public class PaypalPaymentController extends HttpServlet {
                         break;
                     }
                 }
-//                response.put("status", "success");
-//                response.put("redirect_url", redirectUrl);
-//                request.setAttribute("status", "success");
-//                request.setAttribute("redirect_url", redirectUrl);
                 response.sendRedirect(redirectUrl);
             }
         } catch (PayPalRESTException e) {

@@ -24,6 +24,8 @@ public class LogoutController extends HttpServlet {
 			session.removeAttribute("spam");
 			session.removeAttribute("count_spam");
 			session.removeAttribute("last_request");
+		} else {
+			session.removeAttribute("facebookId");
 		}
 		
 		response.sendRedirect("./");
