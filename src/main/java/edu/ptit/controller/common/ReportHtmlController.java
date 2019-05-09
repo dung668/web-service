@@ -70,13 +70,13 @@ public class ReportHtmlController extends HttpServlet {
 			out.println("<td>" + i++ + "</td>");
 			out.println("<td>" + item.getProduct().getName() + "</td>");
 			out.println("<td>" + item.getQuantity() + "</td>");
-			out.println("<td>" + (int) item.getPrice() + " VNĐ</td>");
+			out.println("<td>" + (int) item.getPrice() + " USD</td>");
 			out.println("<td>" + id + "</td>");
 			out.println("</tr>");
 		}
 		out.println("<tr>");
 		out.println("<td colspan='3'><strong>Tổng cộng : " + quantity + "</strong></td>");
-		out.println("<td colspan='2' style='color: red;'>" + (int) price + " VNĐ</td>");
+		out.println("<td colspan='2' style='color: red;'>" + (int) price + " USD</td>");
 		out.println("</tr>");
 		out.println("</tbody></table>");
 		out.println("</body>");

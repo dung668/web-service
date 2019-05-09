@@ -41,7 +41,7 @@
 				</div>
 				<div class="detail-info flex flex-column">
 					<div class="name-info">${product.name}</div>
-					<div class="price-info"><fmt:formatNumber type="number" pattern="###,###" value="${product.price}"></fmt:formatNumber> VNĐ</div>
+					<div class="price-info"><fmt:formatNumber type="number" pattern="###,###" value="${product.price}"></fmt:formatNumber> USD</div>
 					<div class="number-info">
 						Số lượng <input type="number" value="1" min="1" class="input-sweet input-number">
 					</div>

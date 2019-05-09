@@ -48,7 +48,7 @@
 									<th>Địa chỉ</th>
 									<th>Số điện thoại</th>
 									<th>Ngày tham gia</th>
-									<th>Banned</th>
+									<th>Quản trị viên</th>
 									<th>Xóa</th>
 								</tr>
 							</thead>
@@ -62,7 +62,7 @@
 										<td>${user.address}</td>
 										<td>${user.phone}</td>
 										<td>${user.createdDate}</td>
-										<td><input type="checkbox" id="cb-ban" value="${user.id}" ${user.banned == true ? 'checked' : ''} ${user.role == 1 ? 'disabled' : '' }/></td>
+										<td><input type="checkbox" id="cb-ban" value="${user.id}" ${user.role == 1 ? 'checked' : ''}/></td>
 										<td><a href="users-management?action=DELETE&id=${user.id}" onclick="return confirm('Bạn muốn xóa người dùng này?')">Xóa</a></td>
 									</tr>
 									<c:set var="count" value="${count + 1}" scope="page"></c:set>

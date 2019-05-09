@@ -58,7 +58,7 @@
 									<tr>
 										<td><a href="products-management?action=EDIT&id=${product.id }">${count }</a></td>
 										<td>${product.name }</td>
-										<td><fmt:formatNumber type="number" pattern="###,###" value="${product.price}"></fmt:formatNumber> VNĐ</td>
+										<td><fmt:formatNumber type="number" pattern="###,###" value="${product.price}"></fmt:formatNumber> USD</td>
 										<td>${product.category.name }</td>
 										<td>${fn:substring(product.details, 0, 25)}...</td>
 										<td><a href="products-management?action=DELETE&id=${product.id}" onclick="return confirm('Bạn muốn xóa sản phẩm này?')">Xóa</a></td>

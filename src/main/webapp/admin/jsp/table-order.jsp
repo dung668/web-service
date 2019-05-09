@@ -19,7 +19,7 @@
 			<tr>
 				<td>${count }</td>
 				<td>${order.quantity}</td>
-				<td><fmt:formatNumber type="number" pattern="###,###" value="${order.price}"></fmt:formatNumber> VNĐ</td>
+				<td><fmt:formatNumber type="number" pattern="###,###" value="${order.price}"></fmt:formatNumber> USD</td>
 				<td>${order.createdDate}</td>
 				<td><a class="orderid" href="view-order-details?id=${order.id}">${order.id}</a></td>
 				<td class="${order.id }">

@@ -69,7 +69,7 @@
 								</div>
 								<div class="price-sale flex">
 									<div class="price">
-										<fmt:formatNumber type="number" pattern="###,###" value="${product.price}"></fmt:formatNumber> VNĐ
+										<fmt:formatNumber type="number" pattern="###,###" value="${product.price}"></fmt:formatNumber> USD
 									</div>
 									<div class="count-sales">${product.category.name}</div>
 								</div>

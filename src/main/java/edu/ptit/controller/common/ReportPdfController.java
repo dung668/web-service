@@ -69,7 +69,6 @@ public class ReportPdfController extends HttpServlet {
 			
 			document.add(paragraph);
 			
-			
 			PdfPTable table = new PdfPTable(new float[] { 8,52,8,20,12 });
 			//table.setPaddingTop(20);
 			PdfPCell cell1 = new PdfPCell(new Paragraph("ID",fontHeader));
@@ -108,7 +107,7 @@ public class ReportPdfController extends HttpServlet {
 				cell1 = new PdfPCell(new Paragraph(String.valueOf(i++),fontContent));
 				cell2 = new PdfPCell(new Paragraph(item.getProduct().getName(),fontContent));
 				cell3 = new PdfPCell(new Paragraph(String.valueOf(item.getQuantity()),fontContent));
-				cell4 = new PdfPCell(new Paragraph("" + ((int) item.getPrice()) + "VNĐ",fontContent));
+				cell4 = new PdfPCell(new Paragraph("" + ((int) item.getPrice()) + "USD",fontContent));
 				cell5 = new PdfPCell(new Paragraph(""+id,fontContent));
 
 				// them vao bang
@@ -122,7 +121,7 @@ public class ReportPdfController extends HttpServlet {
 			Paragraph p = new Paragraph();
 			Font f = new Font(bf);
 			
-			p.add(new Phrase("Tổng số sản phẩm: " + quantity + " | Tổng số tiền: " + (int) price + " VNĐ",f));
+			p.add(new Phrase("Tổng số sản phẩm: " + quantity + " | Tổng số tiền: " + (int) price + " USD",f));
 			p.setAlignment(Element.ALIGN_CENTER);
 			
 			document.add(table);

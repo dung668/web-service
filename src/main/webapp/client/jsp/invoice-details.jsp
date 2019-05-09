@@ -57,7 +57,7 @@
 									<td>${count }</td>
 									<td>${item.product.name}</td>
 									<td><fmt:formatNumber type="number" pattern="###,###"
-											value="${item.price}"></fmt:formatNumber> VNĐ</td>
+											value="${item.price}"></fmt:formatNumber> USD</td>
 									<td>${item.id}</td>
 									<td>${item.quantity}</td>
 								</tr>
@@ -66,7 +66,7 @@
 							
 							<tr>
 								<td colspan="3"><strong>Tổng cộng : ${quantity }</strong></td>
-								<td colspan="2" style="color: red;"><fmt:formatNumber type="number" pattern="###,###" value="${price}"></fmt:formatNumber> VNĐ</td>
+								<td colspan="2" style="color: red;"><fmt:formatNumber type="number" pattern="###,###" value="${price}"></fmt:formatNumber> USD</td>
 							</tr>
 							
 						</tbody>

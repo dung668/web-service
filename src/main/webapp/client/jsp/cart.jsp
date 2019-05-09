@@ -67,15 +67,15 @@
 										<td class="text-center"><input type="number" min="1"
 											class="input-sweet input-number" value="${item.quantity}"></td>
 										<td><a href="delete-item?product=${item.product.id}">Xóa</a></td>
-										<td><fmt:formatNumber type="number" pattern="###,###" value="${item.product.price}"></fmt:formatNumber> VNĐ</td>
-										<td><fmt:formatNumber type="number" pattern="###,###" value="${item.product.price * item.quantity}"></fmt:formatNumber> VNĐ</td>
+										<td><fmt:formatNumber type="number" pattern="###,###" value="${item.product.price}"></fmt:formatNumber> USD</td>
+										<td><fmt:formatNumber type="number" pattern="###,###" value="${item.product.price * item.quantity}"></fmt:formatNumber> USD</td>
 									</tr>
 									<c:set var="count" value="${count + 1}" scope="page"></c:set>
 								</c:forEach>
 
 								<tr>
 									<td colspan="3"><strong>Tổng cộng : ${quantity }</strong></td>
-									<td colspan="2" style="color: red;"><fmt:formatNumber type="number" pattern="###,###" value="${price}"></fmt:formatNumber> VNĐ</td>
+									<td colspan="2" style="color: red;"><fmt:formatNumber type="number" pattern="###,###" value="${price}"></fmt:formatNumber> USD</td>
 								</tr>
 							</tbody>
 						</table>
@@ -85,8 +85,8 @@
 						<div class="flex">
 							<select name="paymethod" class="input-sweet" required="required"
 								style="margin-right: 10px; margin-bottom: 0px">
-								<option value="cod">COD (thanh toán khi nhận hàng)</option>
-								<option value="atm">Thanh toán qua ATM</option>
+								<option value="cod">Thanh toán qua Paypal</option>
+								<option value="atm">Thanh toán khi nhận hàng</option>
 							</select>
 							<a href="paypal-payment"><button class="btn btn-yes">Tiến hành thanh toán</button></a>
 						</div>
